@@ -40,17 +40,33 @@ def printPhoneBook (phoneBook: list):
 def logOff ():
     print('Пока друг дорогой!')
 
+def Izminemie():
+    print('Данные изменены и внесены в базу)')
+
 def loadSuccess():
     print ('Телефонная книга загружена)')
 
 def saveSuccess():
     print('Телефонная книга сохранена!')
 
+
+def RedactContact():
+    name = input('Введите измененное имя контакта: ')
+    phone = input('Введите измененный телефон контакта: ')
+    comment = input('Введите измененный комментарий к контакту: ')
+    return [name, phone, comment]
+
+
+
 def inputContact():
     name = input('Введите имя контакта: ')
     phone = input('Введите телефон контакта: ')
     comment = input('Введите комментарий к контакту: ')
     return [name, phone, comment]
+
+def inputRdactContact():
+    id = int(input('Введите id контакта который желаете изменить: '))
+    return id
 
 def inputRemoveContact():
     id = int(input('Введите id контакта который желаете удалить: '))

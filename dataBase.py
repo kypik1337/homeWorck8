@@ -13,12 +13,13 @@ def strToList(phoneBook: list):
     return newPhoneBook
     
 def saveDataBase():
-
     with open(path, 'w', encoding='UTF-8' ) as file:
         file.write(listToStr())
 
-
-
+def saveizmBase():
+    with open(path, 'w', encoding='UTF-8' ) as file:
+        file.write(listToStr())
+        
 def listToStr():
     phoneBook = pb.getPhoneBook()
     newPhoneBook = []
@@ -26,3 +27,5 @@ def listToStr():
         newPhoneBook.append(';'.join(contact) + '\n')
     newPhoneBook[-1] = newPhoneBook[-1][:-1]
     return ''.join(newPhoneBook)
+
+

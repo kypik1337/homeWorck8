@@ -24,3 +24,12 @@ def removeContact(id):
         phone_book.pop(id-1)
         return True
     return False
+
+def ZamenaContact(id):
+    global phone_book
+    name = phone_book[id -1] [0]
+    confirm = input(f'Вы действительно хотите изменить контакт: {name}? y/n ')
+    if confirm.lower() == 'y':
+        phone_book.pop(id-1)
+        return True
+    return False

@@ -17,7 +17,15 @@ def main_nenu(choice: int):
             contact = view.inputContact()
             pb.addContact(contact)
         case 5 :
-            pass
+            phoneBook = pb.getPhoneBook()
+            view.printPhoneBook(phoneBook)
+            print()
+            id = view.inputRdactContact()
+            contact = view.RedactContact()
+            if pb.ZamenaContact(id):
+                pb.addContact(contact)
+
+            
         case 6 :
             phoneBook = pb.getPhoneBook()
             view.printPhoneBook(phoneBook)  
