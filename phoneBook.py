@@ -1,4 +1,4 @@
-
+import view
 
 phone_book = []
 
@@ -33,3 +33,15 @@ def ZamenaContact(id):
         phone_book.pop(id-1)
         return True
     return False
+
+def findContact():
+    global phone_book
+    find_string = view.inputFind()
+    not_find = True
+    for id, contact in enumerate(phone_book):
+        for item in contact:
+            if find_string in item.lower():
+                not_find = False
+                print((id + 1), *contact)
+    if not_find:
+        print('По данным которые вы мне показываете я ничего не нашел:)')

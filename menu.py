@@ -24,8 +24,8 @@ def main_nenu(choice: int):
             contact = view.RedactContact()
             if pb.ZamenaContact(id):
                 pb.addContact(contact)
-
-            
+                print()
+                view.Izminemie()
         case 6 :
             phoneBook = pb.getPhoneBook()
             view.printPhoneBook(phoneBook)  
@@ -33,7 +33,7 @@ def main_nenu(choice: int):
             if pb.removeContact(id):
                 view.removeSuccess() 
         case 7 :
-            pass
+            pb.findContact()
         case 0 :
             return True  # тут в единственном кейсе возвращает тру а в других пустату т.к выполняется комманда которая забита в кейсе приравниваются кейсы к фолс
 

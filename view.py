@@ -36,12 +36,11 @@ def printPhoneBook (phoneBook: list):
         print('Телефонная книга пуста или не загружена((')
 
 
-
 def logOff ():
     print('Пока друг дорогой!')
 
 def Izminemie():
-    print('Данные изменены и внесены в базу)')
+    print('Данные изменены и внесены в базу сяп за работу BRO)')
 
 def loadSuccess():
     print ('Телефонная книга загружена)')
@@ -74,3 +73,7 @@ def inputRemoveContact():
 
 def removeSuccess():
     print('Контакт успешно удален)')
+
+def inputFind():
+    find = input('Введите номер или несколько цифр номера телефона для поиска данных о контакте:) ').lower()
+    return find
